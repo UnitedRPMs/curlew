@@ -12,6 +12,7 @@ License: Waqf
 Url:    https://github.com/chamfay/Curlew
 Source0: https://github.com/chamfay/Curlew/archive/%{commit0}.tar.gz#/%{name}-%{version}.tar.gz
 Group: Applications/Multimedia
+BuildArch: noarch
 BuildRequires: python3-devel 
 BuildRequires: python3-setuptools 
 BuildRequires: librsvg2-tools
