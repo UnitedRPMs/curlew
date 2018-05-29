@@ -1,11 +1,11 @@
 %global debug_package %{nil}
-%global gitdate 20170613
-%global commit0 042109ba05e3c82dd801b3ac24b87607259212c7
+%global gitdate 20180528
+%global commit0 10aa181c3839a3ec31faea849ed02fac0a5f9d91
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Name:    curlew
-Version: 0.2.4
+Version: 0.2.5
 Release: 1%{?gver}%{dist}
 Summary: Multimedia converter
 License: Waqf 
@@ -65,6 +65,9 @@ fi
 
 
 %changelog
+
+* Mon May 28 2018 David Vásquez <davidjeremias82 AT gmail DOT com> 0.2.5-1.git10aa181
+- Updated to 0.2.5-1.git10aa181
 
 * Tue Jun 13 2017 David Vásquez <davidjeremias82 AT gmail DOT com> 0.2.4-1.git042109b
 - Initial build
