@@ -3,5 +3,6 @@ BUILDROOT/*
 RPMS/*
 SPECS/*
 SRPMS/*
-curlew*.tar.gz
+*.tar.gz
 .directory
+*.rpm
