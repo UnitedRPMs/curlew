@@ -21,7 +21,7 @@ Requires: ffmpeg
 Requires: mediainfo 
 Requires: hicolor-icon-theme
 Requires: pygobject3
-Requires: python-configparser
+Requires: python3-configparser
 
 
 %description
