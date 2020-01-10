@@ -6,7 +6,7 @@
 
 Name:    curlew
 Version: 0.2.5
-Release: 4%{?gver}%{dist}
+Release: 5%{?gver}%{dist}
 Summary: Multimedia converter
 License: Waqf 
 Url:    https://github.com/chamfay/Curlew
@@ -20,8 +20,9 @@ BuildRequires: gettext intltool
 Requires: ffmpeg 
 Requires: mediainfo 
 Requires: hicolor-icon-theme
-Requires: pygobject3
+Requires: python3-gobject
 Requires: python3-configparser
+Requires: python3-dbus
 
 
 %description
@@ -65,6 +66,10 @@ fi
 
 
 %changelog
+
+* Thu Jan 09 2020 David Va <davidva AT tuta DOT io> 0.2.5-5.git10aa181
+- Rebuilt
+- Renamed dependencias for deprecation of python2
 
 * Sun Dec 29 2019 David Va <davidva AT tuta DOT io> 0.2.5-4.git10aa181
 - Rebuilt
