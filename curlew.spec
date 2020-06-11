@@ -6,15 +6,16 @@
 
 Name:    curlew
 Version: 0.2.5
-Release: 5%{?gver}%{dist}
+Release: 6%{?gver}%{dist}
 Summary: Multimedia converter
 License: Waqf 
 Url:    https://github.com/chamfay/Curlew
 Source0: https://github.com/chamfay/Curlew/archive/%{commit0}.tar.gz#/%{name}-%{version}.tar.gz
 Group: Applications/Multimedia
 BuildArch: noarch
-BuildRequires: python3-devel 
-BuildRequires: python3-setuptools 
+BuildRequires: python%{python3_pkgversion}-devel
+BuildRequires: python%{python3_pkgversion}-setuptools
+BuildRequires: python3-rpm-macros
 BuildRequires: librsvg2-tools
 BuildRequires: gettext intltool
 Requires: ffmpeg 
@@ -33,8 +34,10 @@ Easy to use, Free and Open-Source Multimedia converter for Linux.
 
 %build
 
+python%{python3_pkgversion} setup.py build
+
 %install
-%{__python3} setup.py install --prefix=%{_prefix} --root=%{buildroot} 
+python%{python3_pkgversion} setup.py install --root=%{buildroot} --optimize=1 --skip-build
 
 %find_lang %{name}
 
@@ -67,6 +70,9 @@ fi
 
 %changelog
 
+* Wed Jun 10 2020 David Va <davidva AT tuta DOT io> 0.2.5-6.git10aa181
+- Rebuilt for python3.9
+
 * Thu Jan 09 2020 David Va <davidva AT tuta DOT io> 0.2.5-5.git10aa181
 - Rebuilt
 - Renamed dependencias for deprecation of python2
@@ -74,7 +80,7 @@ fi
 * Sun Dec 29 2019 David Va <davidva AT tuta DOT io> 0.2.5-4.git10aa181
 - Rebuilt
 
-* Mon Aug 03 2018 David Va <davidva AT tuta DOT io> 0.2.5-3.git10aa181
+* Fri Aug 03 2018 David Va <davidva AT tuta DOT io> 0.2.5-3.git10aa181
 - Rebuilt 
 
 * Wed Jul 04 2018 David Va <davidva AT tuta DOT io> 0.2.5-2.git10aa181
