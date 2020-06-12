@@ -13,8 +13,8 @@ Url:    https://github.com/chamfay/Curlew
 Source0: https://github.com/chamfay/Curlew/archive/%{commit0}.tar.gz#/%{name}-%{version}.tar.gz
 Group: Applications/Multimedia
 BuildArch: noarch
-BuildRequires: python%{python3_pkgversion}-devel
-BuildRequires: python%{python3_pkgversion}-setuptools
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
 BuildRequires: python3-rpm-macros
 BuildRequires: librsvg2-tools
 BuildRequires: gettext intltool
@@ -34,10 +34,10 @@ Easy to use, Free and Open-Source Multimedia converter for Linux.
 
 %build
 
-python%{python3_pkgversion} setup.py build
+%py3_build
 
 %install
-python%{python3_pkgversion} setup.py install --root=%{buildroot} --optimize=1 --skip-build
+%py3_install
 
 %find_lang %{name}
 
