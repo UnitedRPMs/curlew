@@ -6,7 +6,7 @@
 
 Name:    curlew
 Version: 0.2.5
-Release: 6%{?gver}%{dist}
+Release: 8%{?gver}%{dist}
 Summary: Multimedia converter
 License: Waqf 
 Url:    https://github.com/chamfay/Curlew
@@ -69,6 +69,9 @@ fi
 
 
 %changelog
+
+* Mon Oct 05 2020 David Va <davidva AT tuta DOT io> 0.2.5-8.git10aa181
+- Rebuilt
 
 * Wed Jun 10 2020 David Va <davidva AT tuta DOT io> 0.2.5-6.git10aa181
 - Rebuilt for python3.9
